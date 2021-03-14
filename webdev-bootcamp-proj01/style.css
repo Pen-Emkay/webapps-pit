@@ -1,0 +1,85 @@
+h1 {
+    color: red;
+}
+
+.photos img {
+    width: 100%;
+}
+
+.photos {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 20px;
+}
+
+body {
+    margin: 0;
+    font-family: sans-serif;
+}
+
+.main {
+    position: relative;
+}
+
+.container {
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.shade1 {
+    height: 50px;
+    /*background-color: #C2EFFF;*/
+    background: radial-gradient(65.06% 99.84% at 15.26% 82.59%, #FD8900 0%, rgba(253, 137, 0, 0) 100%);
+    transform: skewY(-30deg);
+}
+
+.shade2 {
+    height: 50px;
+    /*background-color: #FDB1F1;*/
+    transform: skewY(-18deg);
+    background: radial-gradient(65.06% 99.84% at 15.26% 82.59%, #FD8900 0%, rgba(253, 137, 0, 0) 100%);
+}
+
+.shade3 {
+    height: 50px;
+    /*background-color: #F9CE4B;*/
+    transform: skewY(-10deg);
+    background: radial-gradient(65.06% 99.84% at 15.26% 82.59%, #FD8900 0%, rgba(253, 137, 0, 0) 100%);
+}
+
+.shade4 {
+    height: 50px;
+    /*background-color: #C8E9F8;*/
+    transform: skewY(-6deg);
+    background: radial-gradient(65.06% 99.84% at 15.26% 82.59%, #FD8900 0%, rgba(253, 137, 0, 0) 100%);
+}
+
+.title {
+    display: block;
+    background-color: white;
+    padding: 30px 50px;
+    font-size: 4rem;
+    box-shadow: 0 15px 35px rgb(50 50 93 / 10%), 0 5px 15px rgb(0 0 0 / 7%);
+    position: absolute;
+    opacity: 75%;
+    top: 20px;
+    left: 10px;
+    border-radius: 18px;
+    color: #5E7879;
+}
+
+.info {
+    position: relative;
+    display: block;
+    padding: 20px;
+    top: 200px;
+    text-align: justify;
+    background-attachment: fixed;
+    background-image: url("images/pelican1.jpg");
+    background-position: center;
+    background-size: cover;
+    opacity: 80%;
+}
