@@ -8,11 +8,32 @@
 </head>
 
 <body>
-    <h1>My Projects</h1>
-    <ol>
-        <li><a href="webdev-bootcamp-proj01/colors.html">Experiments with CSS</a></li>
-        <li><a href="webdev-bootcamp-proj02/index.html">Experiments with grid</a></li>
-    </ol>
+    <div class="container">
+        <h1>My Projects</h1>
+        <ol>
+            <li><a href="webdev-bootcamp-proj01/colors.html">Experiments with CSS</a></li>
+            <li><a href="webdev-bootcamp-proj02/index.html">Experiments with grid</a></li>
+        </ol>
+    </div>
+    <Style>
+        body {
+            margin: 0;
+            font-family: sans-serif;
+        }
+        
+        .container {
+            margin: 0 auto;
+            padding: 0 10px;
+            display: flexbox;
+        }
+        
+        .container h1 {
+            color: #333;
+            background-color: #ffaf49;
+            text-align: center;
+            padding: 20px 0;
+        }
+    </Style>
 </body>
 
 </html>
