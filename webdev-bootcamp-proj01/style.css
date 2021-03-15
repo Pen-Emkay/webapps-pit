@@ -24,7 +24,7 @@ body {
 .container {
     z-index: -1;
     position: absolute;
-    top: 0;
+    top: 10px;
     left: 0;
     right: 0;
 }
@@ -40,31 +40,29 @@ body {
     height: 50px;
     background-color: #FDB1F1;
     transform: skewY(-12deg);
-    margin: 0px 30px;
+    margin: 0px 40px;
 }
 
 .shade3 {
     height: 50px;
     background-color: #F9CE4B;
     transform: skewY(-12deg);
-    margin: 0px 40px;
+    margin: 0px 60px;
 }
 
 .shade4 {
     height: 50px;
     background-color: #C8E9F8;
     transform: skewY(-12deg);
-    margin: 0px 50px;
+    margin: 0px 80px;
 }
 
 .title {
     display: block;
-    padding: 30px 50px;
     font-size: 3rem;
     box-shadow: 0 15px 35px rgb(50 50 93 / 10%), 0 5px 15px rgb(0 0 0 / 7%);
     position: absolute;
     top: 30px;
-    left: 10px;
     color: #444;
     width: 100%;
     text-align: center;
@@ -75,7 +73,7 @@ body {
     position: relative;
     display: block;
     padding: 20px;
-    top: 150px;
+    top: 100px;
     text-align: justify;
     background-attachment: fixed;
     background-position: center;
