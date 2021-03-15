@@ -31,54 +31,53 @@ body {
 
 .shade1 {
     height: 50px;
-    /*background-color: #C2EFFF;*/
-    background: radial-gradient(65.06% 99.84% at 15.26% 82.59%, #FD8900 0%, rgba(253, 137, 0, 0) 100%);
-    transform: skewY(-30deg);
+    background-color: #C2EFFF;
+    transform: skewY(-12deg);
+    margin: 0 20px;
 }
 
 .shade2 {
     height: 50px;
-    /*background-color: #FDB1F1;*/
-    transform: skewY(-18deg);
-    background: radial-gradient(65.06% 99.84% at 15.26% 82.59%, #FD8900 0%, rgba(253, 137, 0, 0) 100%);
+    background-color: #FDB1F1;
+    transform: skewY(-12deg);
+    margin: 0px 30px;
 }
 
 .shade3 {
     height: 50px;
-    /*background-color: #F9CE4B;*/
-    transform: skewY(-10deg);
-    background: radial-gradient(65.06% 99.84% at 15.26% 82.59%, #FD8900 0%, rgba(253, 137, 0, 0) 100%);
+    background-color: #F9CE4B;
+    transform: skewY(-12deg);
+    margin: 0px 40px;
 }
 
 .shade4 {
     height: 50px;
-    /*background-color: #C8E9F8;*/
-    transform: skewY(-6deg);
-    background: radial-gradient(65.06% 99.84% at 15.26% 82.59%, #FD8900 0%, rgba(253, 137, 0, 0) 100%);
+    background-color: #C8E9F8;
+    transform: skewY(-12deg);
+    margin: 0px 50px;
 }
 
 .title {
     display: block;
-    background-color: white;
     padding: 30px 50px;
-    font-size: 4rem;
+    font-size: 3rem;
     box-shadow: 0 15px 35px rgb(50 50 93 / 10%), 0 5px 15px rgb(0 0 0 / 7%);
     position: absolute;
-    opacity: 75%;
-    top: 20px;
+    top: 30px;
     left: 10px;
-    border-radius: 18px;
-    color: #5E7879;
+    color: #444;
+    width: 100%;
+    text-align: center;
+    text-shadow: 0 15px 35px rgb(50 50 93 / 10%), 0 5px 15px rgb(0 0 0 / 7%);
 }
 
 .info {
     position: relative;
     display: block;
     padding: 20px;
-    top: 200px;
+    top: 150px;
     text-align: justify;
     background-attachment: fixed;
-    background-image: url("images/pelican1.jpg");
     background-position: center;
     background-size: cover;
     opacity: 80%;
