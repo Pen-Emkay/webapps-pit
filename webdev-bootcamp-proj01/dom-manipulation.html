@@ -1,0 +1,58 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=h1, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body onload="setForm()">
+    <h1>To-Do App</h1>
+    <form action="" id="itemForm">
+        <input type="text" id="todoItem" autocomplete="off" placeholder="Type new item name">
+        <button type="submit">Add item</button>
+    </form>
+    <h3>Need to do</h3>
+    <ul id="itemList">
+    </ul>
+</body>
+<script>
+    let itemForm = document.getElementById("itemForm");
+    let itemText = document.getElementById("todoItem");
+    let itemList = document.getElementById("itemList");
+
+    itemForm.addEventListener("submit", (e) => {
+        e.preventDefault();
+        if (itemText.value) {
+            let newItemName = itemText.value;
+            addNewItem(newItemName);
+            resetForm();
+
+        } else {
+            setForm();
+        }
+    });
+
+    function addNewItem(itemText) {
+        itemList.insertAdjacentHTML("beforeEnd", `<li>${itemText} <button onclick= "removeElement(this)">Remove  item</button></li>`);
+
+    }
+
+    function resetForm() {
+        itemText.value = "";
+        itemText.focus();
+    }
+
+    function removeElement(deleteBtn) {
+        deleteBtn.parentElement.remove();
+        resetForm();
+    }
+
+    function setForm() {
+        itemText.placeholder = "Type new item name";
+        itemText.focus();
+    }
+</script>
+
+</html>
