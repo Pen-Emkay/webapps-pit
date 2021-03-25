@@ -6,9 +6,15 @@ function onPageLoad() {
 }
 
 async function start() {
-    const response = await fetch("https://dog.ceo/api/breeds/list/all");
-    const data = await response.json();
-    createBreedList(data.message);
+    try {
+        const response = await fetch("https://dog.ceo/api/breeds/list/all");
+        const data = await response.json();
+        createBreedList(data.message);
+    } catch (e) {
+        document.getElementById("slideShow").innerHTML = `
+        <div style="color: white; text-align: center; padding:10px;">Sorry, there was a problem!</div>`
+
+    }
 }
 
 function createBreedList(breedList) {
@@ -33,14 +39,22 @@ async function loadByBreed(selectedBreed){
 }
 
 function createSlideShow(imageList){
-    if (slideShowInterval) clearInterval(slideShowInterval)
+    if (slideShowInterval) clearInterval(slideShowInterval);
     if (firstPhotoDelay) clearTimeout(firstPhotoDelay);
     let currentPosition=0;
-    document.getElementById("slideShow").innerHTML=`
-    <div class="slide" style="background-image: url('${imageList[0]}')"></div>
-    <div class="slide" style="background-image: url('${imageList[1]}')"></div>`;
-    currentPosition+=2;
-    slideShowInterval= setInterval(nextSlide, 3000 );
+    if(imageList.length>1){
+        document.getElementById("slideShow").innerHTML=`
+        <div class="slide" style="background-image: url('${imageList[0]}')"></div>
+        <div class="slide" style="background-image: url('${imageList[1]}')"></div>`;
+        currentPosition+=2;
+        if(imageList.length==2)currentPosition=0;
+        slideShowInterval= setInterval(nextSlide, 3000 );
+    }
+    else{
+        document.getElementById("slideShow").innerHTML=`
+        <div class="slide" style="background-image: url('${imageList[0]}')"></div>
+        <div class="slide"></div>`;
+    }
     
     function nextSlide()
     {
