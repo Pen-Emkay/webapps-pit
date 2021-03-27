@@ -1,0 +1,48 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body onload="start()">
+    <div class="main-ui">
+
+        <p class="problem">
+
+        </p>
+        <form action="" class="game-form">
+            <label for="answer-text">Answer: </label>
+            <input type="text" class="answer-input" id="answer-text" autocomplete="off">
+            <button type="submit">Submit</button>
+        </form>
+        <p class="feedBack">You need <span id="attempts-left">10</span> chances and only <span id="mistakes-left">2</span> more mistake/s allowed!</p>
+        <div class="progress-bar">
+            <div class="boxes">
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+            </div>
+            <div class="progress-inner"></div>
+        </div>
+    </div>
+    <div class="olverlay">
+        <div class="overlay-inner">
+            <p class="end-message">Message</p>
+            <button class="startOver-button">OK</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
